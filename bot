@@ -103,7 +103,7 @@ autolaunch() {
       TMUX= tmux new-session -d -s $tab "./$ltab"
       tmux detach -s $tab
     done
-    echo -e " \n\e[1;32m ربات اماده بکار شد \n << \e[1;34m| @atash2012 |\e[1;32m>> \n Bots are Running\n\e[0;39;49m"
+    echo -e " \n\e[1;32m ربات اماده بکار شد \n << \e[1;34m| @likechi |\e[1;32m>> \n Bots are Running\n\e[0;39;49m"
     sleep 1200
   done 
 }
@@ -127,7 +127,7 @@ clear() {
 # install Bot
 install() {
   prtgrn '
-         آیا قصد نصب پیش نیاز های ربات تبچی را دارید؟ بله|خیر <<
+         آیا قصد نصب پیش نیاز های ربات #لایکچی را دارید؟ بله|خیر <<
   >> Do you want to install Essentials of Bot? (Y/N):
 '
   read -rp ' ' install
@@ -208,9 +208,9 @@ printf "\e[1;36m"
     Options:
       createmanual      Create a new Bot manually
       autolaunch        Launch all bots every 20 mins
-      NUMBER            Start bot whit this ID number
-      aNUMBER           Start bot whit this ID number in anticrash mod
-      install           Install of Bot
+      NUMBER            Start bot whit this ID number in anticrash mod
+      install           Instt bot whit this ID number
+      aNUMBER           Starall of Bot
       create            Create a new Bot
       update            Update bot source code
       help              Print this message
