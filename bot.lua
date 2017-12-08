@@ -6,7 +6,7 @@ end
 
 local clock = os.clock
 function sleep(s)
-  local delay = redis:get("botBOT-IDdelay") or 5
+  local delay = redis:get("botBOT-IDdelay") or 0
   local randomdelay = math.random (tonumber(delay)- (tonumber(delay)/2), tonumber(delay)+ (tonumber(delay)/2))
   local t0 = clock()
   while clock() - t0 <= tonumber(randomdelay) do end
@@ -160,7 +160,7 @@ function get_bot (i, adigram)
               local links = redis:smembers("botBOT-IDgoodlinks")
               for x,y in pairs(links) do
                 local sgps = redis:scard("botBOT-IDsupergroups")
-                local maxsg = redis:get("botBOT-IDmaxsg") or 200
+                local maxsg = redis:get("botBOT-IDmaxsg") or 499
                 if tonumber(sgps) < tonumber(maxsg) then
                   tdcli_function({ID = "ImportChatInviteLink",invite_link_ = y},process_join, {link=y})
                     if x == 4 then redis:setex("botBOT-IDmaxjoin", 60, true) return end
