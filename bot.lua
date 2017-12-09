@@ -294,15 +294,15 @@ function get_bot (i, adigram)
 ✍امار 🖥⚡️]] .. tostring(fname) .. [[⚡
 ]] .. tostring(sima) .. [[ </b> 
 🌹➖🌹➖🌹➖🌹
-👤 <b>]] .. tostring(usrs) .. [[</b>  p v 
+👤 <b>]] .. tostring(usrs) .. [[</b> چت خصوصی
 🎎 <b>]] .. tostring(gps) .. [[</b> گروه عادی
- <b>]] .. tostring(sgps) .. [[</b> سوپرگروه 👭👬
+◀️♻️ <b>]] .. tostring(sgps) .. [[</b> سوپرگروه 👭👬
 ⛓ <b>]] .. tostring(wlinks)..[[</b> لینک شناسایی کرده
 📊 <b>]] .. tostring(links)..[[</b>  لینک عضو و ذخیره کرده
 ➿ <b>]] .. tostring(glinks)..[[</b>  لینک در انتظار عضویت
 🌀 <b>]] .. tostring(s)..[[</b> ثانیه تا عضویت مجدد
 🌀 <b>]] .. tostring(ss)..[[</b> ثانیه تا بررسی لینک عضویت
-🌀 <b>]] .. tostring(delay)..[[</b>ثانیه فاصله بین ارسال به گروه ها
+🌀 <b>]] .. tostring(delay)..[[</b> ثانیه فاصله بین ارسال به گروه ها
 👭 حداکثر عضویت در سوپرگروه ها 👭
 💯➡️ <b>]] .. tostring(maxsg)..[[</b> Groups
  ✅ کانال ما ↙️👇
