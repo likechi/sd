@@ -290,30 +290,22 @@ function get_bot (i, adigram)
 						local sima = os.date("%A🔜 %d %B")
 						  
                           local text = 
-[[<b> </b><b>  💱⛓🔅 #لایکچی 🔅⛓💱
-✍وضعیت و امار 🖥⚡️]] .. tostring(fname) .. [[⚡
+[[<b> </b><b>  💱⛓ لایکچی ⛓💱
+✍امار 🖥⚡️]] .. tostring(fname) .. [[⚡
 ]] .. tostring(sima) .. [[ </b> 
-👤 چت های شخصی  : 
-🅰🔜🚥  <b>]] .. tostring(usrs) .. [[</b><code> user </code>
-🎎 گروههای معمولی : 
-🆗➡️🚥  <b>]] .. tostring(gps) .. [[</b><code> Groups </code>  
-👭👬 سوپر گروه ها : 
-🆗🔲 <b>]] .. tostring(sgps) .. [[</b> Groups 🔲✅
-📊 تعداد لینک های شناسایی شده: 
-🆗➡️🚥  <b>]] .. tostring(wlinks)..[[</b><code> links </code> 
-⛓💾 لینک های ذخیره شده : 
-🆗➡️🚥  <b>]] .. tostring(links)..[[</b><code> links </code>  
-📚 لینک های در انتظار عضویت:
-🆗➡️🚥  <b>]] .. tostring(glinks)..[[</b><code> links </code>🔲✅
-⏱ مدت زمان تا عضویت با لینک : 
-🆗➡️🚥  <b>]] .. tostring(s)..[[</b><code> seconds </code>🔲✅
-⏰ مدت زمان تا تایید لینک بعدی :
-🆗➡️🚥  <b>]] .. tostring(ss)..[[</b><code> seconds </code> 
-⏲ مدت زمان بین هر ارسال : 
-🆗➡️🚥  <b>]] .. tostring(delay)..[[</b><code> seconds </code>  
-🔃سقف عضویت در سوپرگروه ها⁉️ 
-🅰🔜🚥  <b>]] .. tostring(maxsg)..[[</b><code> Groups  </code>  
-  🔧 ویرایش ⚙ 
+🌹➖🌹➖🌹➖🌹
+👤<b>]] .. tostring(usrs) .. [[</b>  چت  خصوصی 
+🎎<b>]] .. tostring(gps) .. [[</b> گروه عادی
+👭👬 <b>]] .. tostring(sgps) .. [[</b> سوپرگروه
+📊 <b>]] .. tostring(wlinks)..[[</b> لینک شناسایی کرده
+⛓💾<b>]] .. tostring(links)..[[</b>  لینک عضو و ذخیره کرده
+📚<b>]] .. tostring(glinks)..[[</b>  لینک در انتظار عضویت
+⏱<b>]] .. tostring(s)..[[</b> ثانیه تا عضویت مجدد
+⏰<b>]] .. tostring(ss)..[[</b> ثانیه تا بررسی لینک عضویت
+⏲ <b>]] .. tostring(delay)..[[</b>ثانیه فاصله بین ارسال به گروه ها
+👭 حداکثر عضویت در سوپرگروه ها 👭
+💯➡️ <b>]] .. tostring(maxsg)..[[</b> Groups
+ ✅ کانال ما ↙️👇
 🆔Ⓜ @likechi]]
 
                           return send(msg.chat_id_, 0, text)
