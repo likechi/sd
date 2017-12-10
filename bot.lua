@@ -296,7 +296,7 @@ function get_bot (i, adigram)
 🌹➖🌹➖🌹➖🌹
 👤 <b>]] .. tostring(usrs) .. [[</b> چت خصوصی
 🎎 <b>]] .. tostring(gps) .. [[</b> گروه عادی
-📣♻◀️️ <b>]] .. tostring(sgps) .. [[</b> سوپرگروه 👭👬
+⬅️🔘✍️ <b>]] .. tostring(sgps) .. [[</b> سوپرگروه 👭👬
 ⛓ <b>]] .. tostring(wlinks)..[[</b> لینک شناسایی کرده
 📊 <b>]] .. tostring(links)..[[</b> لینک عضو و ذخیره کرده
 ➿ <b>]] .. tostring(glinks)..[[</b> لینک در انتظار عضویت
