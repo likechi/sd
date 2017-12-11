@@ -313,7 +313,7 @@ function get_bot (i, adigram)
                           local list = redis:smembers("botBOT-IDsupergroups") 
                           local id = msg.reply_to_message_id_
 
-                          local delay = redis:get("botBOT-IDdelay") or 5
+                          local delay = redis:get("botBOT-IDdelay") or 0
                           local sgps = redis:scard("botBOT-IDsupergroups")
                           local esttime = ((tonumber(delay) * tonumber(sgps)) / 60) + 1
                           send(msg.chat_id_, msg.id_, "<code>🏁تعداد سوپرگروه ها : " ..tostring(sgps).. "\n⏰فاصله بین ارسال هر گروه : " ..tostring(delay).. " ثانیه" .."\n⏱مدت زمان تا اتمام ارسال : " ..tostring(math.floor(esttime)).. " دقیقه" .. "\nدر حال ارسال به همه ی سوپرگروه ها✔️</code>\n➖➖➖\n@likechi\n ")
@@ -332,7 +332,7 @@ function get_bot (i, adigram)
                           elseif text:match("send (.*)") or text:match("ارسال (.*)") then
                             local matches = text:match("send (.*)") or text:match("ارسال (.*)")
                             local dir = redis:smembers("botBOT-IDsupergroups")
-                            local delay = redis:get("botBOT-IDdelay") or 5
+                            local delay = redis:get("botBOT-IDdelay") or 0
                             local sgps = redis:scard("botBOT-IDsupergroups")
                             local esttime = ((tonumber(delay) * tonumber(sgps)) / 60) + 1
                           send(msg.chat_id_, msg.id_, "<code>🏁تعداد سوپرگروه ها : " ..tostring(sgps).. "\n⏰فاصله بین ارسال هر گروه : " ..tostring(delay).. " ثانیه" .."\n⏱مدت زمان تا اتمام ارسال : " ..tostring(math.floor(esttime)).. " دقیقه" .. "\nدر حال ارسال به همه ی سوپرگروه ها✔️</code>\n➖➖➖\n@likechi\n ")
