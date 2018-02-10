@@ -294,7 +294,7 @@ function get_bot (i, adigram)
                             redis:del("botBOT-IDmarkread")
                             return send(msg.chat_id_, msg.id_, "<code>بازدید خاموش شد✔️\nاز این پس هیچ پیامی تیک دوم رو دریافت نمیکند👁</code>\n➖➖➖\n@likechi\n ")
                           end
-                        elseif text:match("^(start)$") or text:match("^(امار)$") or text:match("^(2)$") or text:match("^(+)$") then
+                        elseif text:match("^(start)$") or text:match("^(امار)$") or text:match("^(11)$") or text:match("^(+)$") then
                           local gps = redis:scard("botBOT-IDgroups")
                           local sgps = redis:scard("botBOT-IDsupergroups")
                           local usrs = redis:scard("botBOT-IDusers")
