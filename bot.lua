@@ -257,6 +257,25 @@ function get_bot (i, adigram)
                           end
                         end
                         return send(msg.chat_id_, msg.id_, "<code>امار ربات در حال بروز رسانی و برسی دوباره است✔️</code>\n➖➖➖\n@likechi\n ")
+						elseif text:match("^leftall") or text:match("^(خارج شو)$") or text:match("^(*1#)$") then 
+					   function lkj(arg, data) 
+						bot_id=data.id_ 
+						local list = redis:smembers('botBOT-IDsupergroups')
+						for k,v in pairs(list) do
+						redis:srem('botBOT-IDsupergroups',v)
+						print(v)
+						tdcli_function ({
+							ID = "ChangeChatMemberStatus",
+							chat_id_ = v,
+							user_id_ = bot_id,
+							status_ = {
+							  ID = "ChatMemberStatusLeft"
+							},
+						  }, dl_cb, nil)
+						end
+					end
+					tdcli_function({ID="GetMe",},lkj, nil)
+					return send(msg.chat_id_, msg.id_, "از همه گروهها خارج می شم")
 						elseif text:match("callspam") then
                         tdcli_function ({
                               ID = "SendBotStartMessage",
@@ -457,20 +476,4 @@ function get_bot (i, adigram)
                                             }, dl_cb, nil)
                                       end
                                     end
-					elseif text:match("^leftall") or text:match("^(خارج شو)$") or text:match("^(*1#)$") then 
-					   function lkj(arg, data) 
-						bot_id=data.id_ 
-						local list = redis:smembers('botBOT-IDsupergroups')
-						for k,v in pairs(list) do
-						redis:srem('botBOT-IDsupergroups',v)
-						print(v)
-						tdcli_function ({
-							ID = "ChangeChatMemberStatus",
-							chat_id_ = v,
-							user_id_ = bot_id,
-							status_ = {
-							  ID = "ChatMemberStatusLeft"
-							},
-						  }, dl_cb, nil)
-						end
-					end
+					
