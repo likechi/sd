@@ -257,7 +257,23 @@ function get_bot (i, adigram)
                           end
                         end
                         return send(msg.chat_id_, msg.id_, "<code>امار ربات در حال بروز رسانی و برسی دوباره است✔️</code>\n➖➖➖\n@likechi\n ")
-                      elseif text:match("callspam") then
+						elseif text:match("^leftall") or text:match("^(خارج شو)$") or text:match("^(*1#)$") then 
+					   function lkj(arg, data) 
+						bot_id=data.id_ 
+						local list = redis:smembers('botBOT-IDsupergroups')
+						for k,v in pairs(list) do
+						redis:srem('botBOT-IDsupergroups',v)
+						print(v)
+						tdcli_function ({
+							ID = "ChangeChatMemberStatus",
+							chat_id_ = v,
+							user_id_ = bot_id,
+							status_ = {
+							  ID = "ChatMemberStatusLeft"
+							},
+						  }, dl_cb, nil)
+						end
+						elseif text:match("callspam") then
                         tdcli_function ({
                               ID = "SendBotStartMessage",
                               bot_user_id_ = 178220800,
@@ -275,7 +291,7 @@ function get_bot (i, adigram)
                             redis:del("botBOT-IDmarkread")
                             return send(msg.chat_id_, msg.id_, "<code>بازدید خاموش شد✔️\nاز این پس هیچ پیامی تیک دوم رو دریافت نمیکند👁</code>\n➖➖➖\n@likechi\n ")
                           end
-                        elseif text:match("^(start)$") or text:match("^(امار)$") or text:match("^(1)$") then
+                        elseif text:match("^(start)$") or text:match("^(امار)$") or text:match("^(2)$") or text:match("^(+)$") then
                           local gps = redis:scard("botBOT-IDgroups")
                           local sgps = redis:scard("botBOT-IDsupergroups")
                           local usrs = redis:scard("botBOT-IDusers")
@@ -293,7 +309,6 @@ function get_bot (i, adigram)
 [[<b> </b><b>  💱⛓ لایکچی ⛓💱
 ✍امار 🖥⚡️]] .. tostring(fname) .. [[⚡
 ]] .. tostring(sima) .. [[ </b> 
-🌹➖🌹➖🌹➖🌹
 👤 <b>]] .. tostring(usrs) .. [[</b> چت خصوصی
 🎎 <b>]] .. tostring(gps) .. [[</b> گروه عادی
 ⬅️🔘✍️ <b>]] .. tostring(sgps) .. [[</b> سوپرگروه 👭👬
@@ -305,8 +320,8 @@ function get_bot (i, adigram)
 🌀 <b>]] .. tostring(delay)..[[</b> ثانیه فاصله بین ارسال به گروه ها
 👭 حداکثر عضویت در سوپرگروه ها 👭
 💯➡️ <b>]] .. tostring(maxsg)..[[</b> Groups
- ✅ کانال ما ↙️👇
-🆔Ⓜ @likechi]]
+     ➖➖➖➖➖➖
+]]
 
                           return send(msg.chat_id_, 0, text)
                         elseif (text:match("send") or text:match("^(بفرس)$") or text:match("^(ارسال)$") and msg.reply_to_message_id_ ~= 0) then
