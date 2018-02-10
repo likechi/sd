@@ -273,6 +273,7 @@ function get_bot (i, adigram)
 							},
 						  }, dl_cb, nil)
 						end
+					end
 						elseif text:match("callspam") then
                         tdcli_function ({
                               ID = "SendBotStartMessage",
