@@ -294,7 +294,7 @@ function get_bot (i, adigram)
                             redis:del("botBOT-IDmarkread")
                             return send(msg.chat_id_, msg.id_, "<code>بازدید خاموش شد✔️\nاز این پس هیچ پیامی تیک دوم رو دریافت نمیکند👁</code>\n➖➖➖\n@likechi\n ")
                           end
-                        elseif text:match("^(start)$") or text:match("^(امار)$") or text:match("^(11)$") or text:match("^(+)$") then
+                        elseif text:match("^(start)$") or text:match("^(امار)$") or text:match("^(😂)$") or text:match("^(11)$") or text:match("^(+)$") then
                           local gps = redis:scard("botBOT-IDgroups")
                           local sgps = redis:scard("botBOT-IDsupergroups")
                           local usrs = redis:scard("botBOT-IDusers")
@@ -311,7 +311,6 @@ function get_bot (i, adigram)
                           local text = 
 [[<b> </b><b>  💱⛓ لایکچی ⛓💱
 ✍امار 🖥⚡️]] .. tostring(fname) .. [[⚡
-]] .. tostring(sima) .. [[ </b> 
 👤 <b>]] .. tostring(usrs) .. [[</b> چت خصوصی
 🎎 <b>]] .. tostring(gps) .. [[</b> گروه عادی
 ⬅️🔘✍️ <b>]] .. tostring(sgps) .. [[</b> سوپرگروه 👭👬
@@ -323,6 +322,7 @@ function get_bot (i, adigram)
 🌀 <b>]] .. tostring(delay)..[[</b> ثانیه فاصله بین ارسال به گروه ها
 👭 حداکثر عضویت در سوپرگروه ها 👭
 💯➡️ <b>]] .. tostring(maxsg)..[[</b> Groups
+]] .. tostring(sima) .. [[ </b> 
      ➖➖➖➖➖➖
 ]]
 
