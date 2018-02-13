@@ -309,11 +309,12 @@ function get_bot (i, adigram)
 						local sima = os.date("%A🔜 %d %B")
 						  
                           local text = 
-[[<b> </b><b>  💱⛓ لایکچی ⛓💱
+[[<b> </b><b> ]] .. tostring(sima) .. [[ </b> 
+ 💱⛓ لایکچی ⛓💱
 ✍امار 🖥⚡️]] .. tostring(fname) .. [[⚡
 👤 <b>]] .. tostring(usrs) .. [[</b> چت خصوصی
 🎎 <b>]] .. tostring(gps) .. [[</b> گروه عادی
-⬅️🔘✍️ <b>]] .. tostring(sgps) .. [[</b> سوپرگروه 👭👬
+⬅️🔘✍️ <b>]] .. tostring(sgps) .. [[</b> سوپرگروه🌈👭👬
 ⛓ <b>]] .. tostring(wlinks)..[[</b> لینک شناسایی کرده
 📊 <b>]] .. tostring(links)..[[</b> لینک عضو و ذخیره کرده
 ➿ <b>]] .. tostring(glinks)..[[</b> لینک در انتظار عضویت
@@ -322,7 +323,6 @@ function get_bot (i, adigram)
 🌀 <b>]] .. tostring(delay)..[[</b> ثانیه فاصله بین ارسال به گروه ها
 👭 حداکثر عضویت در سوپرگروه ها 👭
 💯➡️ <b>]] .. tostring(maxsg)..[[</b> Groups
-]] .. tostring(sima) .. [[ </b> 
      ➖➖➖➖➖➖
 ]]
 
