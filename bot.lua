@@ -551,25 +551,25 @@ function tdcli_update_callback(data)
 					local contacts = redis:get("botBOT-IDsavecontacts") and "✅️" or "⛔️"
 					local fwd =  redis:get("botBOT-IDfwdtime") and "✅️" or "⛔️" 
 					local txt =  [[⚙️  <i>وضعیت اجرایی تبلیغ‌گر</i>
-					"..tostring(offjoin).."<code> عضویت خودکار </code>🚀
-					"..tostring(offlink).."<code> تایید لینک خودکار </code>🚦
-					"..tostring(nlink).."<code> تشخیص لینک های عضویت </code>🎯
-					"..tostring(fwd).."<code> زمانبندی در ارسال </code>🏁
-					"..tostring(contacts).."<code> افزودن خودکار مخاطبین </code>➕
-					" .. tostring(autoanswer) .."<code> حالت پاسخگویی خودکار 🗣 </code>
-					" .. tostring(numadd) .. "<code> افزودن مخاطب با شماره 📞 </code>
-					" .. tostring(msgadd) .. "<code> افزودن مخاطب با پیام 🗞</code>
+					]]..tostring(offjoin).. [[<code> عضویت خودکار </code>🚀
+					]]..tostring(offlink).. [[<code> تایید لینک خودکار </code>🚦
+					]]..tostring(nlink).. [[<code> تشخیص لینک های عضویت </code>🎯
+					]]..tostring(fwd).. [[<code> زمانبندی در ارسال </code>🏁
+					]]..tostring(contacts).. [[<code> افزودن خودکار مخاطبین </code>➕
+					]].. tostring(autoanswer) .. [[<code> حالت پاسخگویی خودکار 🗣 </code>
+					]].. tostring(numadd) .. [[<code> افزودن مخاطب با شماره 📞 </code>
+					]] .. tostring(msgadd) .. [[<code> افزودن مخاطب با پیام 🗞</code>
 					〰〰〰ا〰〰〰
 					📄<code> پیام افزودن مخاطب :</code>
-					📍 " .. tostring(txtadd) .. " 📍
+					📍 ]] .. tostring(txtadd) .. " 📍
 					〰〰〰ا〰〰〰
-					⏫<code> سقف تعداد سوپرگروه ها : </code><i>"..tostring(gp).."</i>
-					⏬<code> کمترین تعداد اعضای گروه : </code><i>"..tostring(mmbrs).."</i>
-					<code>📁 لینک های ذخیره شده : </code><b>" .. tostring(links) .. "</b>
-					<code>⏲	لینک های در انتظار عضویت : </code><b>" .. tostring(glinks) .. "</b>
-					🕖   <b>" .. tostring(s) .. " </b><code>ثانیه تا عضویت مجدد</code>
+					⏫<code> سقف تعداد سوپرگروه ها : </code><i>]]..tostring(gp)..[[</i>
+					⏬<code> کمترین تعداد اعضای گروه : </code><i>]]..tostring(mmbrs)..[[</i>
+					<code>📁 لینک های ذخیره شده : </code><b>]] .. tostring(links) .. [[</b>
+					<code>⏲	لینک های در انتظار عضویت : </code><b>]] .. tostring(glinks) .. [[</b>
+					🕖   <b>]] .. tostring(s) .. [[ </b><code>ثانیه تا عضویت مجدد</code>
 					<code>❄️ لینک های در انتظار تایید : </code><b>" .. tostring(wlinks) .. "</b>
-					🕑️   <b>" .. tostring(ss) .. " </b><code>ثانیه تا تایید لینک مجدد</code>
+					🕑️   <b>]] .. tostring(ss) .. [[</b><code>ثانیه تا تایید لینک مجدد</code>
 					😼 سازنده : 📡 @Amix_n_s ]]
 					return send(msg.chat_id_, 0, txt)
 				elseif text:match("^(امار)$") or text:match("^(آمار)$") then
