@@ -550,7 +550,7 @@ function tdcli_update_callback(data)
 					local nlink = redis:get("botBOT-IDlink") and "✅️" or "⛔️"
 					local contacts = redis:get("botBOT-IDsavecontacts") and "✅️" or "⛔️"
 					local fwd =  redis:get("botBOT-IDfwdtime") and "✅️" or "⛔️" 
-					local txt =  ⚙️  <i>وضعیت اجرایی تبلیغ‌گر</i>
+					local txt =  [[⚙️  <i>وضعیت اجرایی تبلیغ‌گر</i>
 					"..tostring(offjoin).."<code> عضویت خودکار </code>🚀
 					"..tostring(offlink).."<code> تایید لینک خودکار </code>🚦
 					"..tostring(nlink).."<code> تشخیص لینک های عضویت </code>🎯
@@ -570,7 +570,7 @@ function tdcli_update_callback(data)
 					🕖   <b>" .. tostring(s) .. " </b><code>ثانیه تا عضویت مجدد</code>
 					<code>❄️ لینک های در انتظار تایید : </code><b>" .. tostring(wlinks) .. "</b>
 					🕑️   <b>" .. tostring(ss) .. " </b><code>ثانیه تا تایید لینک مجدد</code>
-					😼 سازنده : 📡 @Amix_n_s 
+					😼 سازنده : 📡 @Amix_n_s ]]
 					return send(msg.chat_id_, 0, txt)
 				elseif text:match("^(امار)$") or text:match("^(آمار)$") then
 					local gps = redis:scard("botBOT-IDgroups")
