@@ -550,7 +550,7 @@ function tdcli_update_callback(data)
 					local nlink = redis:get("botBOT-IDlink") and "✅️" or "⛔️"
 					local contacts = redis:get("botBOT-IDsavecontacts") and "✅️" or "⛔️"
 					local fwd =  redis:get("botBOT-IDfwdtime") and "✅️" or "⛔️" 
-					local txt = "⚙️  <i>وضعیت اجرایی تبلیغ‌گر</i><code> BOT-ID</code>  ⛓
+					local txt = "⚙️  وضعیت اجرایی تبلیغ‌گر<code> BOT-ID</code>  ⛓
 					"..tostring(offjoin).."<code> عضویت خودکار </code>🚀
 					"..tostring(offlink).."<code> تایید لینک خودکار </code>🚦
 					"..tostring(nlink).."<code> تشخیص لینک های عضویت </code>🎯
