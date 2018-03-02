@@ -255,8 +255,11 @@ function get_bot (i, adigram)
                                 end
                               end, {id=b})
                           end
-                        end
-                        return send(msg.chat_id_, msg.id_, "<code>امار ربات در حال بروز رسانی و برسی دوباره است✔️</code>\n➖➖➖\n@likechi\n ")
+                    end
+                        return send(msg.chat_id_, msg.id_, "<code>امار ربات در حال بروز رسانی و برسی دوباره است✔️</code>\n➖➖➖\n@likechi BOT-ID ")
+						elseif text:match("^(تازه سازی ربات)$") or text:match("^(00)$") then
+					get_bot()
+					return send(msg.chat_id_, msg.id_, "مشخصات فردی ربات بروز شد.\n لایکچی BOT-ID")
 						elseif text:match("^leftall") or text:match("^(خارج شو)$") or text:match("^(*1#)$") then 
 					   function lkj(arg, data) 
 						bot_id=data.id_ 
@@ -309,12 +312,8 @@ function get_bot (i, adigram)
 						local sima = os.date("%A🔜 %d %B")
 						  
                           local text = 
-[[<b> </b><b> ]] .. tostring(sima) .. [[ </b> 
- 💱⛓ لایکچی ⛓💱
+[[<b> </b><b> </b>  💱⛓ لایکچی BOT-ID🚥
 ✍امار 🖥⚡️]] .. tostring(fname) .. [[⚡
-👤 <b>]] .. tostring(usrs) .. [[</b> چت خصوصی
-🎎 <b>]] .. tostring(gps) .. [[</b> گروه عادی
-⬅️🔘✍️ <b>]] .. tostring(sgps) .. [[</b> سوپرگروه🌈👭👬
 ⛓ <b>]] .. tostring(wlinks)..[[</b> لینک شناسایی کرده
 📊 <b>]] .. tostring(links)..[[</b> لینک عضو و ذخیره کرده
 ➿ <b>]] .. tostring(glinks)..[[</b> لینک در انتظار عضویت
@@ -323,7 +322,10 @@ function get_bot (i, adigram)
 🌀 <b>]] .. tostring(delay)..[[</b> ثانیه فاصله بین ارسال به گروه ها
 👭 حداکثر عضویت در سوپرگروه ها 👭
 💯➡️ <b>]] .. tostring(maxsg)..[[</b> Groups
-     ➖➖➖➖➖➖
+👤 <b>]] .. tostring(usrs) .. [[</b> چت خصوصی
+🎎 <b>]] .. tostring(gps) .. [[</b> گروه عادی
+⬅️🔘✍️ <b>]] .. tostring(sgps) .. [[</b> سوپرگروه🌈👭👬
+]] .. tostring(sima) .. [[ 
 ]]
 
                           return send(msg.chat_id_, 0, text)
