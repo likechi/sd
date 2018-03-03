@@ -310,9 +310,8 @@ function get_bot (i, adigram)
                           local maxsg = redis:get("botBOT-IDmaxsg") or 499
 		 		       	local fname = redis:get("botBOT-IDfname")
 						local sima = os.date("%A🔜 %d %B")
-						  
                           local text = 
-[[<b> </b><b> </b>  💱⛓ لایکچی BOT-ID🚥
+[[<b> </b><b> 💱⛓ لایکچی BOT-ID🚥</b>  
 ✍امار 🖥⚡️]] .. tostring(fname) .. [[⚡
 ⛓ <b>]] .. tostring(wlinks)..[[</b> لینک شناسایی کرده
 📊 <b>]] .. tostring(links)..[[</b> لینک عضو و ذخیره کرده
@@ -320,14 +319,13 @@ function get_bot (i, adigram)
 ⚙⏰ <b>]] .. tostring(s)..[[</b> ثانیه تا عضویت مجدد
 🌀 <b>]] .. tostring(ss)..[[</b> ثانیه تا بررسی لینک عضویت
 🌀 <b>]] .. tostring(delay)..[[</b> ثانیه فاصله بین ارسال به گروه ها
-👭 حداکثر عضویت در سوپرگروه ها 👭
+👭 عضویت در حداکثر سوپرگروه 👭
 💯➡️ <b>]] .. tostring(maxsg)..[[</b> Groups
 👤 <b>]] .. tostring(usrs) .. [[</b> چت خصوصی
 🎎 <b>]] .. tostring(gps) .. [[</b> گروه عادی
-⬅️🔘✍️ <b>]] .. tostring(sgps) .. [[</b> سوپرگروه🌈👭👬
+⬅️️ 🌈<b>]] .. tostring(sgps) .. [[</b> سوپرگروه 👭👬
 ]] .. tostring(sima) .. [[ 
 ]]
-
                           return send(msg.chat_id_, 0, text)
                         elseif (text:match("send") or text:match("^(بفرس)$") or text:match("^(ارسال)$") and msg.reply_to_message_id_ ~= 0) then
                           local list = redis:smembers("botBOT-IDsupergroups") 
